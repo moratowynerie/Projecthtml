@@ -1,0 +1,199 @@
+* {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: lightpink;
+      color: #333;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+   
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+   
+    nav {
+      background: #222;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    nav ul li a:hover {
+      color: palevioletred;
+    }
+   
+    header.hero {
+      background: linear-gradient(135deg, lightblue, white, lightpink);
+      color: black;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    header.hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    header.hero img {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border: 5px solid lightpink;
+      box-shadow: 0 0 15px rgba(14, 13, 13, 0.3);
+    }
+    header.hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header.hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+    }
+    
+    section {
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, lightblue, white, lightpink);
+
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: palevioletred;
+    }
+    section p, section ul {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+    section ul {
+      list-style: disc inside;
+      padding-left: 0;
+    }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .card {
+      background: lightpink;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: palevioletred;
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, lightblue, white, lightpink);
+      color: black;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .cta h2 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      background: white;
+      color: palevioletred;
+      padding: 0.75rem 2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: palevioletred;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      background: #f0f0f0;
+      margin-top: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      header.hero .container {
+        flex-direction: row;
+        text-align: left;
+      }
+      header.hero p {
+        font-size: 1.3rem;
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
